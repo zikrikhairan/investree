@@ -1,13 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <LayoutsHeader></LayoutsHeader>
+    <LayoutsNavbar></LayoutsNavbar>
   </div>
 </template>
 
+<script>
+import LayoutsHeader from '@/components/layouts/Header.vue';
+import LayoutsNavbar from '@/components/layouts/Navbar.vue';
+
+export default {
+  name: 'app',
+  components: {
+    LayoutsHeader,
+    LayoutsNavbar,
+  },
+};
+
+</script>
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
